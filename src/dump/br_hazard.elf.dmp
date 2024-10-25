@@ -1,0 +1,103 @@
+
+br_hazard:     file format elf32-littleriscv
+
+
+Disassembly of section .text.startup:
+
+00000000 <main>:
+   0:	00100513          	li	a0,1
+   4:	00200593          	li	a1,2
+   8:	00c000ef          	jal	14 <jump>
+   c:	00200513          	li	a0,2
+  10:	00300593          	li	a1,3
+
+00000014 <jump>:
+  14:	00000013          	nop
+  18:	00000013          	nop
+  1c:	00000013          	nop
+  20:	00000013          	nop
+  24:	00b50633          	add	a2,a0,a1
+  28:	00000013          	nop
+  2c:	00000013          	nop
+  30:	00000013          	nop
+  34:	00000013          	nop
+  38:	c0001073          	unimp
+  3c:	00000513          	li	a0,0
+  40:	00008067          	ret
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347          	fmsub.d	ft6,ft6,ft4,ft7,rmm
+   4:	2820                	.insn	2, 0x2820
+   6:	2029                	.insn	2, 0x2029
+   8:	3331                	.insn	2, 0x3331
+   a:	322e                	.insn	2, 0x322e
+   c:	302e                	.insn	2, 0x302e
+	...
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	9241                	.insn	2, 0x9241
+   2:	0000                	.insn	2, 0x
+   4:	7200                	.insn	2, 0x7200
+   6:	7369                	.insn	2, 0x7369
+   8:	01007663          	bgeu	zero,a6,14 <jump>
+   c:	0088                	.insn	2, 0x0088
+   e:	0000                	.insn	2, 0x
+  10:	1004                	.insn	2, 0x1004
+  12:	7205                	.insn	2, 0x7205
+  14:	3376                	.insn	2, 0x3376
+  16:	6932                	.insn	2, 0x6932
+  18:	7032                	.insn	2, 0x7032
+  1a:	5f31                	.insn	2, 0x5f31
+  1c:	326d                	.insn	2, 0x326d
+  1e:	3070                	.insn	2, 0x3070
+  20:	665f 7032 5f32      	.insn	6, 0x5f327032665f
+  26:	3264                	.insn	2, 0x3264
+  28:	3270                	.insn	2, 0x3270
+  2a:	765f 7031 5f30      	.insn	6, 0x5f307031765f
+  30:	697a                	.insn	2, 0x697a
+  32:	32727363          	bgeu	tp,t2,358 <jump+0x344>
+  36:	3070                	.insn	2, 0x3070
+  38:	7a5f 6d6d 6c75      	.insn	6, 0x6c756d6d7a5f
+  3e:	7031                	.insn	2, 0x7031
+  40:	5f30                	.insn	2, 0x5f30
+  42:	767a                	.insn	2, 0x767a
+  44:	3365                	.insn	2, 0x3365
+  46:	6632                	.insn	2, 0x6632
+  48:	7031                	.insn	2, 0x7031
+  4a:	5f30                	.insn	2, 0x5f30
+  4c:	767a                	.insn	2, 0x767a
+  4e:	3365                	.insn	2, 0x3365
+  50:	7832                	.insn	2, 0x7832
+  52:	7031                	.insn	2, 0x7031
+  54:	5f30                	.insn	2, 0x5f30
+  56:	767a                	.insn	2, 0x767a
+  58:	3665                	.insn	2, 0x3665
+  5a:	6434                	.insn	2, 0x6434
+  5c:	7031                	.insn	2, 0x7031
+  5e:	5f30                	.insn	2, 0x5f30
+  60:	767a                	.insn	2, 0x767a
+  62:	3665                	.insn	2, 0x3665
+  64:	6634                	.insn	2, 0x6634
+  66:	7031                	.insn	2, 0x7031
+  68:	5f30                	.insn	2, 0x5f30
+  6a:	767a                	.insn	2, 0x767a
+  6c:	3665                	.insn	2, 0x3665
+  6e:	7834                	.insn	2, 0x7834
+  70:	7031                	.insn	2, 0x7031
+  72:	5f30                	.insn	2, 0x5f30
+  74:	767a                	.insn	2, 0x767a
+  76:	316c                	.insn	2, 0x316c
+  78:	3832                	.insn	2, 0x3832
+  7a:	3162                	.insn	2, 0x3162
+  7c:	3070                	.insn	2, 0x3070
+  7e:	7a5f 6c76 3233      	.insn	6, 0x32336c767a5f
+  84:	3162                	.insn	2, 0x3162
+  86:	3070                	.insn	2, 0x3070
+  88:	7a5f 6c76 3436      	.insn	6, 0x34366c767a5f
+  8e:	3162                	.insn	2, 0x3162
+  90:	3070                	.insn	2, 0x3070
+	...
